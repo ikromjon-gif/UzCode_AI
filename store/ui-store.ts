@@ -32,6 +32,14 @@ export const useUiStore = create<UiState>()(
       toggleRightPanel: () => set((s) => ({ rightPanelCollapsed: !s.rightPanelCollapsed })),
       setCommandPaletteOpen: (open) => set({ commandPaletteOpen: open }),
     }),
-    { name: "uzcode-ai-ui-store" },
+    {
+      name: "uzcode-ai-ui-store",
+      // Rehydration timing from localStorage isn't guaranteed to land
+      // strictly after React's hydration commit, which can produce a
+      // server/client mismatch on first paint. skipHydration + a
+      // manual rehydrate() call (see StoreHydrator) guarantees the
+      // first client render matches the server's default state.
+      skipHydration: true,
+    },
   ),
 );

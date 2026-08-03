@@ -1,8 +1,7 @@
 "use client";
 
-import { Plus, Search, PanelLeftClose, PanelLeftOpen } from "lucide-react";
+import { Plus, Search } from "lucide-react";
 
-import { cn } from "@/lib/utils";
 import { IconButton } from "@/components/ui/icon-button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useUiStore } from "@/store";

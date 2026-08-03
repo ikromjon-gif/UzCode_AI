@@ -1,6 +1,5 @@
 import type { ProviderAdapter } from "../../providers/provider.types";
 import { getModelsByProvider } from "../../models/model-registry";
-import type { UnifiedRequest } from "../request/request.types";
 import type { RawGeminiResponse } from "../response/response.types";
 import { getMockReplyText } from "./mock-response-text";
 

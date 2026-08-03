@@ -1,9 +1,7 @@
-import * as React from "react";
-
 import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from "@/components/ui/table";
 
 import { dataTableEmptyCellBase } from "./data-table.styles";
-import type { ColumnDef, DataTableProps } from "./data-table.types";
+import type { DataTableProps } from "./data-table.types";
 
 /**
  * UzCode AI — DataTable (foundation)

@@ -1,6 +1,5 @@
 "use client";
 
-import * as React from "react";
 import { PanelLeftClose, PanelLeftOpen, PanelRightClose, PanelRightOpen } from "lucide-react";
 
 import { cn } from "@/lib/utils";

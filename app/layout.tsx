@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
+import { StoreHydrator } from "@/store/StoreHydrator";
 import { siteConfig } from "@/constants/site";
 
 import "./globals.css";
@@ -71,7 +72,10 @@ export default function RootLayout({
       <body
         className={`${fontSans.variable} ${fontMono.variable} font-sans antialiased`}
       >
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <StoreHydrator />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
