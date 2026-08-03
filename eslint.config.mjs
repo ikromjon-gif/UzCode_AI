@@ -12,16 +12,30 @@ const compat = new FlatCompat({
 /** @type {import('eslint').Linter.Config[]} */
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+
+  // Logger uchun console.* ruxsat
+  {
+    files: ["lib/ai-engine/runtime/logger/**/*.ts"],
+    rules: {
+      "no-console": "off",
+    },
+  },
+
+  // Qolgan loyiha uchun
   {
     rules: {
       "no-console": ["warn", { allow: ["warn", "error"] }],
       "@typescript-eslint/no-unused-vars": [
         "error",
-        { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
+        {
+          argsIgnorePattern: "^_",
+          varsIgnorePattern: "^_",
+        },
       ],
       "@typescript-eslint/no-explicit-any": "error",
     },
   },
+
   {
     ignores: [".next/**", "node_modules/**", "dist/**"],
   },
