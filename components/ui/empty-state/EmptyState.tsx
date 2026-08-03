@@ -18,7 +18,7 @@ export function EmptyState({
   return (
     <div className={cn(emptyStateVariants(), className)} {...props}>
       {icon ? <div className={emptyStateIconBase}>{icon}</div> : null}
-      <p className={emptyStateTitleBase}>{title}</p>
+     <p className={emptyStateTitleBase}>{heading}</p>
       {description ? <p className={emptyStateDescriptionBase}>{description}</p> : null}
       {action}
     </div>
