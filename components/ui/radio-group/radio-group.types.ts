@@ -5,7 +5,7 @@ import type * as React from "react";
 import type { radioGroupVariants } from "./radio-group.variants";
 
 export interface RadioGroupProps
-  extends React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>,
+  extends Omit<React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>, "orientation">,
     VariantProps<typeof radioGroupVariants> {}
 
 export interface RadioGroupItemProps
