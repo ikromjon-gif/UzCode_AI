@@ -1,3 +1,5 @@
+"use client";
+
 import { Sidebar } from "../sidebar";
 import { TopNav } from "../top-nav";
 import { AppBreadcrumb } from "../breadcrumb";
