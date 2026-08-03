@@ -22,7 +22,7 @@ import { aiModels } from "../../constants/models";
 export function ModelSelector() {
   const selectedModelId = useChatStore((s) => s.selectedModelId);
   const setSelectedModel = useChatStore((s) => s.setSelectedModel);
-  const selected = aiModels.find((m) => m.id === selectedModelId) ?? aiModels[0];
+  const selected = aiModels.find((m) => m.id === selectedModelId) ?? aiModels[0]!;
   const SelectedIcon = selected.icon;
 
   return (
