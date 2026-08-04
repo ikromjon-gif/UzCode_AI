@@ -1,5 +1,5 @@
 export const topNavBase =
-  "sticky top-0 z-[var(--z-sticky)] flex h-14 shrink-0 items-center gap-3 border-b border-border " +
+  "sticky top-0 z-[var(--z-sticky)] flex h-16 shrink-0 items-center gap-3 border-b border-border " +
   "bg-background/80 px-4 backdrop-blur-[var(--blur-panel)]";
 
 export const projectSelectorBase =

@@ -6,7 +6,7 @@ import { ChevronRight } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
-import { navItemBase, navItemActive } from "./sidebar.styles";
+import { navItemBase, navItemActive, navItemActiveIndicator } from "./sidebar.styles";
 import type { SidebarNavItemProps } from "./sidebar.types";
 
 /**
@@ -31,6 +31,7 @@ export function SidebarNavItem({ item, collapsed, activePath }: SidebarNavItemPr
           onClick={() => setExpanded((v) => !v)}
           className={cn(navItemBase, "w-full justify-between", isActive && navItemActive)}
         >
+          {isActive && <span className={navItemActiveIndicator} aria-hidden="true" />}
           <span className="flex items-center gap-3">
             <Icon className="h-4 w-4 shrink-0" aria-hidden="true" />
             {!collapsed && <span className="truncate">{item.label}</span>}
@@ -60,6 +61,7 @@ export function SidebarNavItem({ item, collapsed, activePath }: SidebarNavItemPr
       className={cn(navItemBase, isActive && navItemActive)}
       title={collapsed ? item.label : undefined}
     >
+      {isActive && <span className={navItemActiveIndicator} aria-hidden="true" />}
       <Icon className="h-4 w-4 shrink-0" aria-hidden="true" />
       {!collapsed && <span className="truncate">{item.label}</span>}
     </Link>
