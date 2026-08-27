@@ -1,6 +1,6 @@
-# UzCode AI
+# 🧠 UzCode AI
 
-AI-Powered Software Engineering Platform. **Build Smarter. Code Faster. Deploy Everywhere.**
+> AI-powered software engineering platform — build smarter, code faster, deploy everywhere.
 
 > Sprint 1 — Project Foundation. Application pages have not been built yet (see Sprint 5+).
 
